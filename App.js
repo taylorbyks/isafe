@@ -1,21 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar"
+import React from "react";
+import { ThemeProvider } from "styled-components"
+import { theme } from "./src/styles/themes"
+import AppLoading from "expo-app-loading"
+import { useFonts, JosefinSans_400Regular, JosefinSans_600SemiBold } from "@expo-google-fonts/josefin-sans"
+import Routes from "./src/routes";
+
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+  const [ FontsLoaded ] = useFonts({ JosefinSans_400Regular, JosefinSans_600SemiBold })
+  
+  if(!FontsLoaded){
+    return <AppLoading />
+  }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  return (
+    <ThemeProvider theme={theme}>
+      <StatusBar style="auto" />
+      <Routes />
+    </ThemeProvider>
+  )
+}
