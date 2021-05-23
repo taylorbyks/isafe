@@ -1,9 +1,17 @@
-import styled, { css } from "styled-components/native";
+import styled, { css } from 'styled-components/native'
 
 export const HomeContainer = styled.View`
   ${({ theme }) => css`
     flex: 1;
-    align-items: center;
-    justify-content: center;
   `}
-`;
+`
+
+export const LogoImage = styled.Image`
+  ${({ theme }) => css`
+    position: absolute;
+    top: -10;
+    left: 160;
+    width: ${theme.metrics.px(100)}px;
+    height: ${theme.metrics.px(100)}px;
+  `}
+`
