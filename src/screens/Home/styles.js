@@ -9,8 +9,8 @@ export const HomeContainer = styled.View`
 export const LogoImage = styled.Image`
   ${({ theme }) => css`
     position: absolute;
-    top: -10;
-    left: 160;
+    top: ${theme.metrics.px(-10)}px;
+    left: ${theme.metrics.px(145)}px;
     width: ${theme.metrics.px(100)}px;
     height: ${theme.metrics.px(100)}px;
   `}

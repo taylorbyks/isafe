@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { HomeContainer, LogoImage } from './styles'
 import { Title, LoadAnimation } from '../../components'
@@ -6,18 +6,25 @@ import { Title, LoadAnimation } from '../../components'
 import { Dimensions, StyleSheet } from 'react-native'
 import MapView, { Marker, PROVIDER_GOOGLE } from 'react-native-maps'
 
-// import mapMarker from '../../assets//marker.png'
+import covidMarker from '../../assets/covidMarker.png'
 import Logo from '../../assets/logo.png'
 import mapStyle from '../../utils/mapStyle.json'
-import api from '../../services/api'
+import api, { data } from '../../services/api'
 
 export const Home = () => {
-  const [loading, setLoading] = useState(false)
-  const [covid, setCovid] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [covid, setCovid] = useState(data)
+
+  useEffect(() => {
+    setTimeout(()=>{
+      setLoading(false)
+     }, 600)
+  })
 
   if (loading) {
     return <LoadAnimation />
   }
+
   return (
     <HomeContainer>
       <MapView
@@ -27,15 +34,14 @@ export const Home = () => {
         initialRegion={{
           latitude: -24.95,
           longitude: -53.4547,
-          latitudeDelta: 0.09,
-          longitudeDelta: 0.09,
+          latitudeDelta: 0.07,
+          longitudeDelta: 0.07,
         }}
       >
-        {/* {covid.map(virus => {
+        {covid.map(virus => {
           return (
-            <Marker 
-            key={virus.id}  
-            icon={mapMarker}
+            <Marker
+            icon={covidMarker}
             calloutAnchor={{
               x: 2.5,
               y: 0.9,
@@ -44,15 +50,9 @@ export const Home = () => {
               latitude: virus.latitude, 
               longitude: virus.longitude,
             }}
-            >
-                <Callout tooltip onPress={() => handleNavigationtoVirusDetails(virus.id)}>
-                  <View style={styles.calloutContainer}>
-                    <Text style={styles.calloutText}>{virus.name}</Text>
-                  </View>
-                </Callout>
-            </Marker>
+            />
           )
-        })} */}
+        })}
       </MapView>
       <LogoImage source={Logo} />
     </HomeContainer>
