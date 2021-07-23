@@ -1,0 +1,19 @@
+{
+  "name": "isafe-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Taylor Schinvelksi",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "pg": "^8.6.0",
+    "typeorm": "^0.2.34",
+    "uuid": "^8.3.2"
+  }
+}
