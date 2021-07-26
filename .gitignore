@@ -14,3 +14,4 @@ mobile/web-build/
 
 backend/node_modules/
 backend/*.lock
+node_modules
