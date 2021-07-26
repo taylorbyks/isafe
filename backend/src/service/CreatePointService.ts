@@ -1,5 +1,5 @@
 import { getCustomRepository } from 'typeorm'
-import { PointsRepositories } from '../repositories/PointsRepositories'
+import { PointsRepositories } from '../repositories'
 
 interface IUserRequest {
   latitude: Number,
