@@ -23,10 +23,10 @@ export const Create = () => {
   async function handleCreate() {
     const { latitude, longitude } = position
 
-    const data = new FormData()
-
-    data.append('latitude', String(latitude))
-    data.append('longitude', String(longitude))
+    const data = {
+      latitude: String(latitude),
+      longitude: String(longitude),
+    }
 
     console.log(data)
 
