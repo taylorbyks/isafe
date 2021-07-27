@@ -8,16 +8,16 @@ export class CreateUsers1624320980880 implements MigrationInterface {
         columns: [
           {
             name: 'id',
-            type: 'numeric',
+            type: 'uuid',
             isPrimary: true,
           },
           {
             name: 'latitude',
-            type: 'decimal(2, 2)',
+            type: 'varchar',
           },
           {
             name: 'longitude',
-            type: 'decimal(2, 2)',
+            type: 'varchar',
           },
           {
             name: 'created_at',

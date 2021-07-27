@@ -7,10 +7,10 @@ export class Point {
   readonly id: String
 
   @Column()
-  longitude: Number
+  longitude: String
 
   @Column()
-  latitude: Number
+  latitude: String
 
   @CreateDateColumn()
   created_at: Date

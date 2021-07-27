@@ -2,8 +2,8 @@ import { getCustomRepository } from 'typeorm'
 import { PointsRepositories } from '../repositories'
 
 interface IUserRequest {
-  latitude: Number,
-  longitude: Number
+  latitude: String
+  longitude: String
 }
 
 export class CreatePointService {
@@ -12,7 +12,7 @@ export class CreatePointService {
 
     const point = pointsRepository.create({
       latitude,
-      longitude
+      longitude,
     })
 
     await pointsRepository.save(point)
