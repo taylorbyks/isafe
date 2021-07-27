@@ -1,7 +1,7 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Welcome, Home, Logon } from "../screens";
+import { Welcome, Home, Logon, Create } from "../screens";
 
 import { theme } from "../styles/themes"
 
@@ -12,6 +12,7 @@ const AppRoutes = () => (
       <stackRoutes.Screen name="Welcome" component={Welcome}/>
       <stackRoutes.Screen name="Logon" component={Logon}/>
       <stackRoutes.Screen name="Home" component={Home}/>
+      <stackRoutes.Screen name="Create" component={Create}/>
    </stackRoutes.Navigator>
 )
 
