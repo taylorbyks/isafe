@@ -1,6 +1,6 @@
 import React, { useState }  from 'react'
 import { saveCity } from '../../services/storage'
-import { Title, Description, Button, Input } from '../../components'
+import { Title, Button, Input } from '../../components'
 import { LogonContainer } from './styles'
 
 import { useNavigation } from '@react-navigation/core'
@@ -46,7 +46,7 @@ export const Logon = () => {
     <LogonContainer>
       <Title>Qual a sua cidade?</Title>
 
-      <Input 
+      <Input
         placeholder="Digite sua Cidade"
         selected={isFocused || isFilled}
         value={setCity}
