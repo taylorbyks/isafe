@@ -14,6 +14,16 @@ export const LogoImage = styled.Image`
   `}
 `
 
+export const TopContainer = styled.View`
+  ${({ theme }) => css`
+    position: absolute;
+    align-items: center;
+    top: ${theme.metrics.px(90)}px;
+    width: ${theme.metrics.px(150)}px;
+    height: ${theme.metrics.px(100)}px;
+  `}
+`
+
 export const FooterContainer = styled.View`
   ${({ theme }) => css`
     background-color: ${theme.colors.white};

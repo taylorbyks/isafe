@@ -24,7 +24,7 @@ export const Welcome = () => {
       <MainImage source={virus} />
 
       <Description>
-        O !Safe vai te mostrar lugares que nao sao seguros, onde a contaminaçao esta alta para você evitar
+        O !Safe vai te mostrar lugares que não são seguros, onde a contaminaçao esta alta para você evitar
       </Description>
 
       <IconButton iconName="chevron-forward-outline" onPress={handleNext} />

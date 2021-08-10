@@ -7,7 +7,14 @@ import { theme } from "../styles/themes"
 
 const stackRoutes = createStackNavigator();
 
-const AppRoutes = () => (
+export const AppRoutesAuth = () => (
+   <stackRoutes.Navigator headerMode='none' screenOptions={{ cardStyle: {backgroundColor: theme.colors.white}  }}>
+      <stackRoutes.Screen name="Home" component={Home}/>
+      <stackRoutes.Screen name="Create" component={Create}/>
+   </stackRoutes.Navigator>
+)
+
+export const AppRoutes = () => (
    <stackRoutes.Navigator headerMode='none' screenOptions={{ cardStyle: {backgroundColor: theme.colors.white}  }}>
       <stackRoutes.Screen name="Welcome" component={Welcome}/>
       <stackRoutes.Screen name="Logon" component={Logon}/>
@@ -15,5 +22,3 @@ const AppRoutes = () => (
       <stackRoutes.Screen name="Create" component={Create}/>
    </stackRoutes.Navigator>
 )
-
-export default AppRoutes;

@@ -9,3 +9,17 @@ export async function getPoints() {
     return error
   }
 }
+
+export async function removePoint(uuid) {
+  try {
+    const result = await api.delete('points', {
+      data: {
+        uuid,
+      },
+    })
+
+    return result
+  } catch (error) {
+    return error
+  }
+}
