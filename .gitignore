@@ -16,4 +16,5 @@ mobile/*.log
 
 backend/node_modules/
 backend/*.lock
+backend/dist/
 node_modules
