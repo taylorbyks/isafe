@@ -4,8 +4,9 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
-    "start": "tsc",
-    "build": "ts-node-dev src/server.ts",
+    "ngrok": "ngrok http 3000",
+    "start": "ts-node-dev src/server.ts  ngrok http 3000",
+    "build": "tsc",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "devDependencies": {
