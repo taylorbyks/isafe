@@ -50,10 +50,16 @@ cd backend
 yarn
 ```
 
-After you needs to create a postgresql database named tico, and run:
+After you needs to create a postgresql database named isafe, and run:
 
 ```bash
 yarn typeorm migration:run
+```
+
+You will need to use ngrok or similar program to expose the port 3333, run:
+
+```bash
+ngrok http 3333
 ```
 
 ### Mobile
@@ -62,6 +68,8 @@ yarn typeorm migration:run
 cd mobile
 yarn
 ```
+
+Paste in BaseURL at src/services/api.js the ngrok URL.
 
 ## 🚀 Getting start <a name="start"/>
 
