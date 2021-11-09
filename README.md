@@ -7,10 +7,7 @@
 </h3>
 
 <p align="center">
-  <img src="" alt="animated" />
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="" alt="animated" />
+  <img src="https://media1.giphy.com/media/1bmNIyLVhA1cT2nNrA/giphy.gif?cid=790b76115265aa5c05a67ae90e206d4d52b1955882715a84&rid=giphy.gif&ct=g" alt="animated" />
 </p>
 
 
